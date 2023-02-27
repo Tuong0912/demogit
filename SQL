@@ -1,0 +1,6 @@
+select Subname,  max(Credit) as max from student join subject group by Subname having max(Credit) >= all(select max(Credit) from Student join Subject);
+select * from student join subject;
+
+select subname , max(mark) from subject join mark group by subname having max(mark) >= all(select max(mark) from mark join subject);
+
+select StudentName, mark from student join mark order by mark desc  ;
